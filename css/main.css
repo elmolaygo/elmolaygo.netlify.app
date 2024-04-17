@@ -1,0 +1,87 @@
+:root {
+  --main-color: #00AAFF;
+  --black: #0F0F0F;
+  --light-black: #5B5B5B;
+  --white: #FFFFFF;
+  --light-green: #99EEDD;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #304A69;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  background: var(--main-color);
+  padding: 0 30px;
+}
+
+.nav .logo {
+  font-size: 22px;
+  background: var(--black);
+  color: var(--white);
+  padding: 15px 25px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px 0px #9ed;
+  transition: 300ms linear;
+}
+
+.nav .logo.toggle {
+  z-index: 21;
+  border-radius: 41px;
+}
+
+.nav #toggle {
+  background: var(--black);
+  box-shadow: 0 0 5px 0px var(--light-green);
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  transition: 200ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav #toggle i {
+  font-size: 30px;
+  color: var(--white);
+  transition: 300ms ease-out;
+}
+
+.nav #toggle.toggle {
+  z-index: 21;
+  border-radius: 30px 30px;
+  background: var(--white);
+}
+
+.nav #toggle.toggle i {
+  color: var(--black);
+}
+
+.nav #drawer {
+  top: 0;
+  right: -100%;
+  position: fixed;
+  background: var(--black);
+  z-index: 20;
+  height: 100vh;
+  width: 100%;
+  transition: 300ms ease-in;
+  border-radius: 30px;
+}
+
+.nav #drawer.toggle {
+  right: -50%;
+}
