@@ -1,87 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 :root {
-  --main-color: #00AAFF;
-  --black: #0F0F0F;
-  --light-black: #5B5B5B;
-  --white: #FFFFFF;
-  --light-green: #99EEDD;
+  --background: #22272e;
+  --primary: #275DAD;
+  --primary-light: #99B2DD;
+  --secondary: #3A4F41;
+  --secondary-light: #ADF1D2;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
-  background: #304A69;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
 }
 
-.nav {
+  /* Navigation Bar V1 */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: var(--primary);
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  width: 100%;
-  background: var(--main-color);
-  padding: 0 30px;
+  justify-content: space-evenly;
 }
 
-.nav .logo {
-  font-size: 22px;
-  background: var(--black);
-  color: var(--white);
-  padding: 15px 25px;
-  border-radius: 40px;
-  box-shadow: 0 0 5px 0px #9ed;
-  transition: 300ms linear;
+.navbar .logo {
+  font-size: 40px;
+  font-family: "Kanit";
+  text-shadow: 0 0 20px var(--background);
 }
 
-.nav .logo.toggle {
-  z-index: 21;
-  border-radius: 41px;
-}
-
-.nav #toggle {
-  background: var(--black);
-  box-shadow: 0 0 5px 0px var(--light-green);
-  height: 80px;
-  width: 80px;
-  border-radius: 40px;
-  transition: 200ms ease-in-out;
+.navbar .links {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
 }
 
-.nav #toggle i {
-  font-size: 30px;
-  color: var(--white);
-  transition: 300ms ease-out;
+.navbar .links li {
+  list-style: none;
+  margin: 20px;
 }
 
-.nav #toggle.toggle {
-  z-index: 21;
-  border-radius: 30px 30px;
-  background: var(--white);
-}
-
-.nav #toggle.toggle i {
-  color: var(--black);
-}
-
-.nav #drawer {
-  top: 0;
-  right: -100%;
-  position: fixed;
-  background: var(--black);
-  z-index: 20;
-  height: 100vh;
-  width: 100%;
-  transition: 300ms ease-in;
-  border-radius: 30px;
-}
-
-.nav #drawer.toggle {
-  right: -50%;
+.navbar .links li .link {
+  text-decoration: none;
+  font-family: "Outfit";
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-light);
+  z-index: 10;
+  position: relative;
 }
