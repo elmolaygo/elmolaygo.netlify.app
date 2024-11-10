@@ -27,7 +27,17 @@ body {
   font-family: sans-serif;
 }
 
-  /* Navigation Bar V1 */
+/* Horizontal Rule */
+
+.horrule {
+  width: 80%;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--primary);
+  margin: 10px 0 10px 0;
+}
+
+/* Navigation Bar V1 */
 
 .navbar {
   position: sticky;

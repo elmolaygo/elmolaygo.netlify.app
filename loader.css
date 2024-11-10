@@ -1,0 +1,51 @@
+body {
+    background: rgb(76,81,88);
+    background: linear-gradient(180deg, rgba(76,81,88,1) 0%, rgba(64,73,85,1) 50%, rgba(39,44,52,1) 100%);
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    color: var(--primary);
+    font-family: "Outfit", sans-serif;
+    font-size: 80px;
+    text-shadow: 0px 20px 0px #99B2DD60, 0px -20px 0px #99B2DD40, 0 0 8px var(--primary-light);
+}
+
+.horrule {
+    margin: 60px 0 60px 0;
+    box-shadow: 0 0 8px 4px var(--primary);
+}
+
+/* Loading... */
+
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: var(--primary);
+    font-size: 40px;
+    font-family: "Outfit", sans-serif;
+    padding-bottom: 8px;
+    background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+    animation: l2 3s linear;
+}
+
+.loader:before {
+    content:"Loading..."
+}
+
+@keyframes l2 {to{background-size: 100% 3px}}
+
+@media only screen and (max-width: 400px) {
+    .text {
+        font-size: 60px;
+    }
+}
