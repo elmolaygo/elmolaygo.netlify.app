@@ -1,0 +1,27 @@
+.navigation {
+    justify-content: space-around;
+}
+
+.title {
+    font-size: 50px;
+    font-family: "Winky Sans", sans-serif;
+    color: #ffffff;
+    text-shadow: 1px 1px 10px #bed6e4;
+}
+
+.content {
+    margin: 20px 20px;
+}
+
+.pageTitle {
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    color: #6865ec;
+}
+
+.para-1 {
+    color: #fafafa;
+    font-family: "Noto Sans", sans-serif;
+    margin-top: 20px;
+    margin: 20px 100px 100px 100px;
+}
